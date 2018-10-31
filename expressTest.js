@@ -13,8 +13,7 @@ function randomNum() {
 }
 
 app.get('/',function(req,res){
-  res.render('home.handlebars'); //We can omit the .handlebars extension as we do below
-  res.render('number', randomNum());  
+  res.render('home.handlebars', 'number', randomNum()); //We can omit the .handlebars extension as we do below  
 });
 
 app.get('/other-page',function(req,res){
